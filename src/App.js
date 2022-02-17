@@ -1,22 +1,26 @@
 import React, { useState } from 'react'
+import Increment from './Components/Increment'
+import InputChange from './Components/InputChange'
 
 export default function App() {
 
-  const [number,setNumber] = useState(0)
-  
-  let increment = () =>{
-    setNumber(number+1);
-    console.log("hello")
-  }
+  const [nbr,setNbr] = useState({
+    clicks: 0
+  })
 
+  const [val,setVal] = useState({
+    text : "Basevalue"
+  })
+  
+  // const incrementAgain = () =>{
+  //   number.num += 1
+  //   setNumber((prev) => { return {...prev, num: prev.num + 1}})
+    
+  // }
   return (
     <>
-      <div className="d-inline">
-        <span>{number}</span>
-      </div>
-      <div>
-        <button type="submit" onClick={() => increment()}>Increase</button>
-      </div>
+      <Increment  count={nbr.clicks} setCount={setNbr}/>
+      <InputChange  original={val.text} new={setVal}/>
     </>
   )
 }
