@@ -10,12 +10,12 @@ export default function InputChange(props) {
         };
         console.log(k)
     };
-
     return (
         <>
             <div>
+                <h1>Exo2</h1>
                 <h3>{props.original}</h3>
-                <input onKeyPress={(k) => changeTxt (k)}/>
+                <input onKeyPress={(k) => changeTxt (k)} />
             </div>
         </>
     )

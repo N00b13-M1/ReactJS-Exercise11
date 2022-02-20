@@ -8,10 +8,12 @@ export default function Increment(test) {
         // console.log(props.count)
     }
     
+
     return (
         <>
             <div>
                 <div>
+                    <h1>Exo1</h1>
                     <p>You have clicked <span>{test.count}</span> times</p>
                 </div>
                 <div>
